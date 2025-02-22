@@ -1,46 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic CV</title>
-</head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>QUANTUM GRAVITY and All of That - International seminar series</title>
+	<link rel="icon" type="image/png" href="https://qgholqi.inpcs.net/favicon.png">
+	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- base href="https://qgholqi.inpcs.net/" -->
+        <style>
+            td.tdmenuitem:hover {
+                color: royalblue;
+            }
+            span.pleftmenuitem {
+	        border-radius: 20px;
+                padding: 10px;
+		font-size:125%;
+		color: #fefefe;
+            }
+            span.pleftmenuitem:hover {
+                background-color: rgb(63,63,63);
+                cursor: pointer;
+            }
+            span.imgleftmenuitem {
+	        padding: 6px;
+            }
+            span.imgleftmenuitem:hover {
+                cursor: pointer;
+            }
+            li.ulleftmenuitem:hover {
+                cursor: pointer;
+                color: royalblue;
+            }
+            span.spanleftmenuitem:hover {
+                cursor: pointer;
+                color: royalblue;
+            }
+            .yearbutton {
+	        border-radius: 20px;
+                padding: 10px;
+		font-size:125%;
+                background-color: rgb(127,127,127);
+		color: #fefefe;
+                outline: none;
+            }
+            .yearbutton:hover {
+                background-color: rgb(63,63,63);
+                cursor: pointer;
+            }
+        </style>
+<script language="JavaScript" type="text/javascript">
+
+function norobotValidate() {
+    
+    //Validation
+    if (document.getElementById("idfullname").value.trim() == "")
+    {
+        alert ("Full name must be entered.");
+        return false;
+    }
+    if (document.getElementById("idaffiliation").value.trim() == "")
+    {
+        alert ("Affiliation must be entered.");
+        return false;
+    }
+    if (isNaN(document.getElementById("idnorobot").value.trim()))
+    {
+        alert ("A test question answer looks invalid.");
+        return false;        
+    }
+
+    //norobot check    
+    var xhr=new XMLHttpRequest();
+    xhr.onreadystatechange=function() {
+        if (xhr.readyState==4 && xhr.status==200) {
+            if (xhr.responseText != "invalid.php")
+            {
+                var oldaction=document.getElementById("idformreg").action;
+                document.getElementById("idformreg").action=xhr.responseText;
+                document.getElementById("idformreg").submit();
+                document.getElementById("idformreg").action=oldaction;
+            }
+            else
+            {
+                alert ("A test question answer is invalid.");
+            }
+        }
+    };
+    xhr.open("GET","norobot.php?a="+document.getElementById("idnorobot").value,true);
+    xhr.send();
+    return true;
+}
+
+  function myResize() {
+//      alert(window.innerWidth);
+//      if (window.innerWidth<800)
+      if (document.documentElement.clientWidth<800)
+      {
+	  document.getElementById('content').style.width=document.getElementById('precontent').offsetWidth-16+"px";
+	  document.getElementById('br1').innerHTML="<br/>";
+	  //document.getElementById('br2').innerHTML="<br/>";
+	  document.getElementById('bre1').innerHTML="<br/>";
+      }
+      else
+      {
+          document.getElementById('content').style.width="784px";
+	  document.getElementById('br1').innerHTML=" ";
+	  //document.getElementById('br2').innerHTML=" ";
+	  document.getElementById('bre1').innerHTML=" ";
+      }
+      document.getElementById('precontent').style.top=document.getElementById('header').offsetHeight+"px";
+      document.getElementById('precontent').style.height=Math.max(window.innerHeight-document.getElementById('header').offsetHeight,document.getElementById('content').offsetHeight+16)+"px";
+  }
+
+function yearOpenClose(year) {
+    var content = document.getElementById('yearcontent'+year);
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  }
+</script>
+    </head>
+
+    
 <body>
-    <header>
-        <h1></h1>
-        <p>Lectures in Quantum gravity</p>
-        <p>School of Fundamental Physics and Mathematical Sciences,
-Hangzhou Institute for Advanced Study, University of Chinese Academy of Sciences,</p>
-        <p>310024, No.1, Sub-Lane Xiangshan, Xihu District, Hangzhou, China</p>
-    </header>
-    <section>
-        <h2>Research interests</h2>
-        <p>Asymptotic safety, functional renormalization group, exact renormalization group,
-quantum gravity, quantum field theory, quantum field theory in curved spacetime </p>
-    </section>
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li>Ph.D. in theoretical physics, Radboud University Nijmegen (2019 –2024)</li>
-        </ul>
-         <ul>
-            <li>Master in theoretical physics, Lanzhou University (2016 – 2019)</li>
-        </ul>
-        <ul>
-            <li>Bachelor in physics, Lanzhou University (2012 – 2016)</li>
-        </ul>
-    </section>
-     <section>
-        <h2>Honors and scholarships</h2>
-        <ul>
-            <li>PhD scholarship from China Scholarship Council (2019)</li>
-        </ul>
-         <ul>
-            <li>The award for outstanding Master thesis of Gansu Province (2019)</li>
-        </ul>
-        <ul>
-            <li>The award for outstanding graduate award in Lanzhou University (2016)</li>
-        </ul>
-    </section>
+
+
+
+
+    
 </body>
 </html>
