@@ -451,7 +451,61 @@ TBA
 <hr style="opacity:0.3;width:100%;">
 
 	</div>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->        
 
+<div id="page_registration" style="visibility:hidden;display:none;">
+
+        <p>The registration is open to anyone interested in attending the talks and participating in the discussion sessions.<br>
+        The registration is <strong>required</strong> to better maintain the seminars.
+        </p>
+
+        <form id="idformreg" action="noreply.php" method="post" target="_self">
+
+
+        <p>&nbsp;</p>
+
+          <p style="font-size:80%;"><i><span style="color:rgb(255,40,37);">*</span>Indicates required field</i></p>
+
+          <p>Academic position<br>
+        <input id="idposition" name="position" type="text" size="40">
+          </p>
+
+          <p>Full Name<span style="color:rgb(255,40,37);">*</span><br>
+        <input id="idfullname" name="fullname" type="text" required="" size="40">
+          </p>
+
+          <p>Affiliation<span style="color:rgb(255,40,37);">*</span><br>
+        <input id="idaffiliation" name="affiliation" type="text" required="" size="40">
+          </p>
+
+          <p>Institutional e-mail<span style="color:rgb(255,40,37);">*</span><br>
+        <input id="idemail" name="email" type="email" required="" size="40">
+          </p>
+
+        <p>Test question (to prevent automated registrations)<span style="color:rgb(255,40,37);">*</span><br>
+        Given two decimal integers 21 and 6 compute their
+        difference        and write it in a 8-base numeric system:<br>
+            <input id="idnorobot" name="norobot" type="text" required="" size="40">
+        </p>
+        
+        <input id="idbutton" name="button" type="button" value="Submit" onclick="norobotValidate();">
+        <input type="reset">
+        </form>
+
+        <p style="font-size:80%;"><i>By clicking the "Submit" button you
+ give your explicit consent for storing and processing your personal 
+data for the purposes of maintaining the "Quantum Gravity and All of 
+That" seminar series. You moreover give this way your explicit consent 
+for receiving e-mail notifications regarding upcoming seminars and 
+related information. Each e-mail message will contain explicit 
+unsubscribe instructions to have you removed from the mailing list in 
+case you wish so.</i></p>
+
+    
+</div>
+
+        
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->   
 
     
 </body>
